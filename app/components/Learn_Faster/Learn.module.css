@@ -1,0 +1,52 @@
+.learnContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    color: #0E5269;
+    width: 670px;
+    height: 460px;
+}
+
+.content {
+    width: 100%;
+}
+
+.learnContainer h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+    line-height: 104px;
+}
+
+.learnContainer h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #023047;
+    line-height: 56px;
+}
+
+.learnContainer p {
+    color: #6C757D;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 32px;
+    height: 96px;
+    width: 100%;
+}
+
+.learnContainer button {
+    display: flex;
+    background-color: #126783;
+    color: #FEFEFE;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 36px;
+    border-radius: 4px;
+    padding: 20px 30px 20px 30px;
+    line-height: 27px;
+    gap: 10px;
+}
+
+
+

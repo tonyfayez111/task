@@ -1,0 +1,13 @@
+.loginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #126783 ;
+    border-radius: 4px;
+    /* padding: 20 px 30 px; */
+    width: 40%;
+    height: 48px;
+    font-family: 'Poppins', sans-serif;
+}
