@@ -2,12 +2,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 0.9rem;
     color: #fff;
-    background-color: #126783 ;
+    background-color: #126783;
     border-radius: 4px;
-    /* padding: 20 px 30 px; */
-    width: 40%;
+    padding: 0 30px;
     height: 48px;
+    min-width: 180px;
+    max-width: 250px;
+    width: auto;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.loginButton:hover {
+    background-color: #1a7ea3;
+}
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+    .loginButton {
+        font-size: 16px;
+        height: 44px;
+        padding: 0 24px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .loginButton {
+        font-size: 15px;
+        height: 40px;
+        padding: 0 20px;
+        min-width: 100px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .loginButton {
+        font-size: 14px;
+        height: 36px;
+        padding: 0 16px;
+        min-width: 90px;
+    }
 }

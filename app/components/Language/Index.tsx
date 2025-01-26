@@ -22,7 +22,7 @@ export default function Language() {
         setLanguage(langCode);
         setIsOpen(false);
     };
-
+   
     // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

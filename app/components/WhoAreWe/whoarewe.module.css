@@ -1,0 +1,127 @@
+.whoarewe_container {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.whoarewe_content_left {
+    padding: 4rem;
+    width: 60%;
+}
+
+.whoarewe_content_left h1 {
+    font-size: 2.5rem;
+    color: #023047;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    height: auto;
+}
+
+.whoarewe_content_left p {
+    font-size: 1.1rem;
+    color: #023047;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.whoarewe_content_left button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #126783;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.whoarewe_content_left button:hover {
+    background-color: #0a4d66;
+}
+
+.whoarewe_content_right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+    .whoarewe_container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .whoarewe_content_left {
+        padding: 2rem;
+    }
+
+    .whoarewe_content_left h1 {
+        font-size: 2rem;
+    }
+
+    .whoarewe_content_left p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .whoarewe_container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .whoarewe_content_left,
+    .whoarewe_content_right {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .whoarewe_content_left h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .whoarewe_content_left p {
+        text-align: center;
+    }
+
+    .whoarewe_content_left button {
+        margin: 0 auto;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .whoarewe_container {
+        padding: 0.5rem;
+    }
+
+    .whoarewe_content_left {
+        padding: 1rem;
+    }
+
+    .whoarewe_content_left h1 {
+        font-size: 1.5rem;
+    }
+
+    .whoarewe_content_left p {
+        font-size: 0.9rem;
+    }
+
+    .whoarewe_content_left button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+    

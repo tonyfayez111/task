@@ -38,9 +38,9 @@ body {
 /* Add any other RTL-specific styles you need */
 
 /* Base responsive styles */
-html {
+/* html {
     font-size: 16px;
-}
+} */
 
 @media (max-width: 640px) {
     html {

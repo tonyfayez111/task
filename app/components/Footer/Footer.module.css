@@ -1,0 +1,54 @@
+/* Footer.module.css */
+.footer {
+  background-color: #0E5269;
+  padding: 40px 0;
+  color: #ffeb3b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logoSection {
+  margin-bottom: 30px;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  min-width: 200px;
+}
+
+.column h3 {
+  color: #ffeb3b;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.column a {
+
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.column a:hover {
+  opacity: 0.8;
+}

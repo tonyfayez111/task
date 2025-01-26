@@ -12,10 +12,13 @@ export default function LearnFaster() {
     return (
         <div className={styles.learnContainer}>
             <div className={styles.content}>
-                <h1>{t('learnfaster.title')} <span style={{ color: '#FFB703' }}>ED max</span>!</h1>
+                <h1>
+                    {t('learnfaster.title')} 
+                    <span className={styles.highlight}>ED max</span>!
+                </h1>
                 <h2>{t('learnfaster.description')}</h2>
                 <p>{t('learnfaster.paragraph')}</p>
-                <button>
+                <button className={styles.actionButton}>
                     {t('learnfaster.button')}
                     <svg 
                         width="24" 
@@ -23,7 +26,7 @@ export default function LearnFaster() {
                         viewBox="0 0 24 24" 
                         fill="none" 
                         xmlns="http://www.w3.org/2000/svg"
-                        style={{ transform: isRTL ? 'rotate(180deg)' : 'none' }}
+                        className={isRTL ? styles.iconRTL : ''}
                     >
                         <path d="M14.0001 5L21.0001 12M21.0001 12L14.0001 19M21.0001 12L3.00012 12" 
                             stroke="#FEFEFE" 
