@@ -13,8 +13,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/task' : '',
-  basePath: isProd ? '/task/' : '',
+  assetPrefix: isProd ? '' : '',
+  basePath: isProd ? '' : '',
   webpack(config, options) {
     // ...existing code...
     return config;
