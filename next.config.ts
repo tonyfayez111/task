@@ -8,7 +8,7 @@ const nextConfig = {  output: 'export',
   },
   
   assetPrefix: isProd ? 'task' : '',
-  basePath: isProd ? 'task' : '',
+  basePath: isProd ? '/task' : '',
 
 };
 
