@@ -1,0 +1,65 @@
+.aboutUsContainer {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+.header {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.paragraph {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.learnMoreBtn {
+    padding: 0.8rem 2rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learnMoreBtn:hover {
+    background-color: #357abd;
+}
+
+.imageContainer {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        flex-direction: column;
+    }
+}

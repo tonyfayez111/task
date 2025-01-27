@@ -1,0 +1,161 @@
+.instructorsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.instructorsSection {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: start; /* This will respect the document's direction */
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+}
+
+
+
+.instructorsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.instructorCard {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.instructorCard:hover {
+    transform: translateY(-5px);
+}
+
+.imageContainer {
+    width: 150px;
+    height: 150px;
+   
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.instructorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructorName {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.category {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statNumber {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.seeMoreBtn {
+    padding: 0.8rem 2rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.seeMoreBtn:hover {
+    background-color: #357abd;
+}
+
+@media (max-width: 1024px) {
+    .instructorsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .instructorsGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .statsContainer {
+        gap: 0.5rem;
+    }
+    
+    .statNumber {
+        font-size: 1rem;
+    }
+    
+    .statLabel {
+        font-size: 0.7rem;
+    }
+    .iconContainer {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #666;
+    }
+    
+    .statCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.statIcon {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #666;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

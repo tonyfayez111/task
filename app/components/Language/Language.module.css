@@ -1,0 +1,124 @@
+.languageButton {
+    padding: 8px 16px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.languageButton:hover {
+    background: #f0f0f0;
+}
+
+.languageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.languageSelector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.languageText {
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color : #1D1B1B
+}
+
+.active {
+    background-color: #FF6B00;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.flipped {
+    transform: rotate(180deg);
+}
+
+.languageContainer:hover .languageText {
+    color: #FF6B00;
+}
+
+.languageContainer:hover .languageText.active {
+    color: white;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 1000;
+    margin-top: 4px;
+}
+
+.dropdownItem {
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+@media (min-width: 640px) {
+    .languageSelector {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .languageText {
+        font-size: 16px;
+    }
+
+    .arrow {
+        width: 24px;
+        height: 24px;
+    }
+
+    .dropdown {
+        min-width: 150px;
+    }
+
+    .dropdownItem {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}
+
+.dropdownItem:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdownItem.active {
+    background-color: #FF6B00;
+    color: white;
+}
+
+.dropdownItem:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dropdownItem:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+[dir="rtl"] .dropdown {
+    right: auto;
+    left: 0;
+}

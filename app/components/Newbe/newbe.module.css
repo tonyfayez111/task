@@ -1,0 +1,112 @@
+.newbe {
+  background-color: #126783;
+  padding: 40px;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.newbe_content {
+  width: 100%;
+  height: 100%;
+  color: #FEFEFE;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  max-width: 80%;
+  height: auto;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.arrowButton:hover {
+  transform: scale(1.1);
+}
+
+.newbe h1 {
+  font-size: 2em;
+  color: #FEFEFE;
+  margin-bottom: 2rem;
+  margin:0 7rem;
+}
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .newbe {
+    padding: 30px;
+  }
+
+  .newbe h1 {
+    font-size: 1.75em;
+  }
+
+  .arrowButton svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .newbe {
+    padding: 20px;
+    min-height: 40vh;
+  }
+
+  .newbe h1 {
+    float: left;
+    font-size: 1.5em;
+    margin-bottom: 1.5rem;
+  }
+
+  .newbe_content {
+    gap: 10px;
+  }
+
+  .arrowButton svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .newbe {
+    padding: 15px;
+  }
+
+  .newbe h1 {
+    font-size: 1.25em;
+    margin-bottom: 1rem;
+  }
+
+  .arrowButton svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.noFlip {
+    /* Force LTR direction and prevent flipping */
+    direction: ltr !important;
+    transform: none !important;
+}
+
