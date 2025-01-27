@@ -1,6 +1,8 @@
+"use client"
 import styles from './courses.module.css';
 import course from '@/app/Images/course/course.png';
 import Image from 'next/image';
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 interface Course {
     id: number;
@@ -13,40 +15,43 @@ interface Course {
 
 }
 
-const courses: Course[] = [
+const getCourses = (t: any) => [
     {
         id: 1,
-        title: "Web Development Fundamentals",
-        description: "Learn the basics of HTML, CSS, and JavaScript to build modern websites.",
+        title: t("courses.course1.title"),
+        description: t("courses.course1.description"),
         imageUrl: course,
         price: 500,
-        instructor: "Remon",
+        instructor: t("courses.course1.instructor"),
         totalLessons: 12
     },
     {
         id: 2,
-        title: "Python Programming",
-        description: "Master Python programming from basics to advanced concepts.",
+        title: t("courses.course2.title"),
+        description: t("courses.course2.description"),
         imageUrl: course,
         price: 500,
-        instructor: "Remon",
+        instructor: t("courses.course2.instructor"),
         totalLessons: 15
     },
     {
         id: 3,
-        title: "Data Science Essentials",
-        description: "Introduction to data analysis, visualization, and machine learning.",
+        title: t("courses.course3.title"),
+        description: t("courses.course3.description"),
         imageUrl: course,
         price: 500,
-        instructor: "Remon",
+        instructor: t("courses.course3.instructor"),
         totalLessons: 10
     }
 ];
 
 export default function Index() {
+    const { t } = useTranslation();
+    const courses = getCourses(t);
+
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Courses</h1>
+        <div id="courses" className={styles.container}>
+            <h1 className={styles.title}>{t("courses.mainTitle")}</h1>
             <div className={styles.courseGrid}>
                 {courses.map((course) => (
                     <div key={course.id} className={styles.courseCard}>
@@ -56,16 +61,16 @@ export default function Index() {
                         <div className={styles.courseContent}>
                             <h2 className={styles.courseTitle}>{course.title}</h2>
                             <div className={styles.priceSection}>
-                                {course.price} LE
+                                {course.price} {t("courses.currency")}
                             </div>
                             <div className={styles.courseInfo}>
-                                <span>{course.totalLessons} Lessons</span>
+                                <span>{course.totalLessons} {t("courses.lessons")}</span>
                                 <span>{course.instructor}</span>
                             </div>
                             <p className={styles.courseDescription}>{course.description}</p>
                             <div className={styles.buttonGroup}>
-                                <button className={styles.addToCartBtn}>Add to cart</button>
-                                <button className={styles.viewDetailsBtn}>View details</button>
+                                <button className={styles.addToCartBtn}>{t("courses.addToCart")}</button>
+                                <button className={styles.viewDetailsBtn}>{t("courses.viewDetails")}</button>
                             </div>
                         </div>
                     </div>

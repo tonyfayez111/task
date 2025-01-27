@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslation } from '@/app/hooks/useTranslation';
 import styles from "./NavBar.module.css"
+import Link from 'next/link';
 
 export default function NavBar() {
     const { t } = useTranslation();
@@ -25,11 +26,11 @@ export default function NavBar() {
             </div>
 
             <ul className={`${styles.navList} ${isMenuOpen ? styles.open : ''}`}>
-                <li>{t('nav.home')}</li>
-                <li>{t('nav.about_us')}</li>
-                <li>{t('nav.courses')}</li>
-                <li>{t('nav.instructors')}</li>
-            </ul>
+    <li><Link href="#hero">{t('nav.home')}</Link></li>
+    <li><Link href="#whoarewe">{t('nav.about_us')}</Link></li>
+    <li><Link href="#courses">{t('nav.courses')}</Link></li>
+    <li><Link href="#instructors">{t('nav.instructors')}</Link></li>
+</ul>
         </nav>
     )
 }

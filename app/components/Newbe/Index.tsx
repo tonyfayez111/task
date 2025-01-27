@@ -1,10 +1,14 @@
+"use client"
+
 import styles from "./newbe.module.css";
 import Image from "next/image";
 import newbeImage from "@/app/Images/Newbe/newbe.png"; // Adjust path as needed
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 export default function Newbe() {
+  const { t } = useTranslation();
   return <div className={styles.newbe}>
-      <h1>New at ED max</h1>
+      <h1>{t('newbe.title')}</h1>
     
     <div className={`${styles.newbe_content} ${styles.noFlip}`}>
       <button className={styles.arrowButton}>

@@ -1,9 +1,14 @@
-// Footer.tsx
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { useLanguage } from '@/app/contexts/LanguageContext';
+import { translations } from '@/app/translations';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language as keyof typeof translations].footer;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -20,52 +25,47 @@ const Footer = () => {
         
         <div className={styles.linksContainer}>
           <div className={styles.column}>
-            <h3>Home</h3>
+            <h3>{t.home.title}</h3>
             <ul>
-              <li><Link href="/">Main Page</Link></li>
-              <li><Link href="/features">Features</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              {t.home.links.map((link, index) => (
+                <li key={index}><Link href="/">{link}</Link></li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.column}>
-            <h3>About Us</h3>
+            <h3>{t.about.title}</h3>
             <ul>
-              <li><Link href="/story">Our Story</Link></li>
-              <li><Link href="/team">Team</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
-              <li><Link href="/mission">Mission</Link></li>
+              {t.about.links.map((link, index) => (
+                <li key={index}><Link href="/">{link}</Link></li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.column}>
-            <h3>Courses</h3>
+            <h3>{t.courses.title}</h3>
             <ul>
-              <li><Link href="/courses/programming">Programming</Link></li>
-              <li><Link href="/courses/design">Design</Link></li>
-              <li><Link href="/courses/business">Business</Link></li>
-              <li><Link href="/courses/marketing">Marketing</Link></li>
+              {t.courses.links.map((link, index) => (
+                <li key={index}><Link href="/">{link}</Link></li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.column}>
-            <h3>Instructors</h3>
+            <h3>{t.instructors.title}</h3>
             <ul>
-              <li><Link href="/join">Become Instructor</Link></li>
-              <li><Link href="/top">Top Instructors</Link></li>
-              <li><Link href="/resources">Resources</Link></li>
-              <li><Link href="/community">Community</Link></li>
+              {t.instructors.links.map((link, index) => (
+                <li key={index}><Link href="/">{link}</Link></li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.column}>
-            <h3>My Account</h3>
+            <h3>{t.account.title}</h3>
             <ul>
-              <li><Link href="/profile">Profile</Link></li>
-              <li><Link href="/settings">Settings</Link></li>
-              <li><Link href="/billing">Billing</Link></li>
-              <li><Link href="/notifications">Notifications</Link></li>
+              {t.account.links.map((link, index) => (
+                <li key={index}><Link href="/">{link}</Link></li>
+              ))}
             </ul>
           </div>
         </div>

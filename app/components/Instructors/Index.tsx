@@ -1,3 +1,4 @@
+"use client"
 import styles from './Instructors.module.css';
 import instructor from '@/app/Images/Instructor/instructor.png';
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import coursesicon from '@/app/Images/InstructorIcons/coursesicon.png';
 import centersicon from '@/app/Images/InstructorIcons/centersicon.png';
 import studentsicon from '@/app/Images/InstructorIcons/studentsicon.png';
 import viewsicon from '@/app/Images/InstructorIcons/viewsicon.png';
+import { useTranslation } from '@/app/hooks/useTranslation';
 
 interface InstructorData {
     id: number;
@@ -52,9 +54,11 @@ const instructors: InstructorData[] = [
 ];
 
 export default function Instructors() {
+    const { t } = useTranslation();
+
     return (
-        <div className={styles.instructorsSection}>
-            <h1 className={styles.title}>Our Instructors</h1>
+        <div id="instructors" className={styles.instructorsSection} >
+            <h1 className={styles.title}>{t('instructors.title')}</h1>
             <div className={styles.instructorsGrid}>
                 {instructors.map((instructor) => (
                     <div key={instructor.id} className={styles.instructorCard}>
@@ -74,54 +78,34 @@ export default function Instructors() {
                             <div className={styles.statItem}>
                                 <span className={styles.statNumber}>{instructor.courses}</span>
                                 <span className={styles.statIcon}>
-            <Image 
-                src={coursesicon}
-                alt="courses icon"
-                width={24}
-                height={24}
-            />
-        </span>
-                                <span className={styles.statLabel}>Courses</span>
+                                    <Image src={coursesicon} alt={t('instructors.stats.courses')} width={24} height={24} />
+                                </span>
+                                <span className={styles.statLabel}>{t('instructors.stats.courses')}</span>
                             </div>
                             <div className={styles.statItem}>
                                 <span className={styles.statNumber}>{instructor.students}</span>
                                 <span className={styles.statIcon}>
-            <Image 
-                src={studentsicon}
-                alt="Students icon"
-                width={24}
-                height={24}
-            />
-        </span>
-                                <span className={styles.statLabel}>Students</span>
+                                    <Image src={studentsicon} alt={t('instructors.stats.students')} width={24} height={24} />
+                                </span>
+                                <span className={styles.statLabel}>{t('instructors.stats.students')}</span>
                             </div>
                             <div className={styles.statItem}>
                                 <span className={styles.statNumber}>{instructor.views}</span>
                                 <span className={styles.statIcon}>
-            <Image 
-                src={viewsicon}
-                alt="Views icon"
-                width={24}
-                height={24}
-            />
-        </span>
-                                <span className={styles.statLabel}>Views</span>
+                                    <Image src={viewsicon} alt={t('instructors.stats.views')} width={24} height={24} />
+                                </span>
+                                <span className={styles.statLabel}>{t('instructors.stats.views')}</span>
                             </div>
                             <div className={styles.statItem}>
                                 <span className={styles.statNumber}>{instructor.centers}</span>
                                 <span className={styles.statIcon}>
-            <Image 
-                src={centersicon}
-                alt="centers icon"
-                width={24}
-                height={24}
-            />
-        </span>
-                                <span className={styles.statLabel}>Centers</span>
+                                    <Image src={centersicon} alt={t('instructors.stats.centers')} width={24} height={24} />
+                                </span>
+                                <span className={styles.statLabel}>{t('instructors.stats.centers')}</span>
                             </div>
                             
                         </div>
-                        <button className={styles.seeMoreBtn}>See More</button>
+                        <button className={styles.seeMoreBtn}>{t('instructors.seeMore')}</button>
                         
                     </div>
 
