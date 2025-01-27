@@ -1,4 +1,3 @@
-
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {  output: 'export',
   distDir: 'out',
@@ -15,7 +14,10 @@ compiler: {
   
   assetPrefix: isProd ? '/task' : '',
   basePath: isProd ? '/task' : '',
-
+  webpack(config, options) {
+    // ...existing code...
+    return config;
+  },
 };
 
 module.exports = nextConfig;
