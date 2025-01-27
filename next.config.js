@@ -18,4 +18,4 @@ compiler: {
 
 };
 
-export default nextConfig;
+module.exports = nextConfig;

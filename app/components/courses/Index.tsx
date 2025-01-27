@@ -15,7 +15,7 @@ interface Course {
 
 }
 
-const getCourses = (t: any) => [
+const getCourses = (t: any) : Course[] => [
     {
         id: 1,
         title: t("courses.course1.title"),
