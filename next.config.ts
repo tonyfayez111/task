@@ -6,6 +6,9 @@ const nextConfig = {  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
 },
+compiler: {
+  styledComponents: true,
+},
   images: {
     unoptimized: true, // Disable default image optimization
   },
